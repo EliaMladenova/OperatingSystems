@@ -1,0 +1,28 @@
+[ $# -eq 3 ] || exit 1 – checks number of arguments and exits if not equal
+$# - stores the number of command-line arguments that were passed to the shell program
+egrep - scans a specific file, line to line, and prints the line(s) that contain the search string/regular expression
+$0 - the name of the script itself (script.sh)
+$1 - the first argument (filename1) …etc
+exit 0 – success
+exit 1 – minor problems (e.g. few arguments)
+exit 2 - serious trouble (e.g. cannot access command-line argument)
+echo … >> - redirects the output of the command on its left hand side to the end of the file on the right-hand side (appends)
+xargs - reads streams of data from standard input, then generates and executes command lines; meaning it can take output of a command and passes it as argument of another command
+comm - compare two sorted files line by line: 
+•	comm [OPTION].. FILE1 FILE2
+•	-1 suppress lines unique to file1
+•	-2 suppress lines unique to file2
+•	-3 suppress lines that appear in both files
+tr - utility for translating or deleting characters: 
+•	tr “[..]” “[..]” | tr [..] ‘\..’ | tr ‘..’ ‘..’
+•	-d : delete characters in the first set from the output.
+•	-s : replaces repeated characters listed in the set1 with single occurrence
+sed - most common use of SED command in UNIX is for substitution or for find and replace
+•	sed [OPTION] FILE 
+if: 
+•	-e FILE: FILE exists
+•	-f FILE: FILE is file (not directory/ device) and exists
+•	-r FILE: FILE exists and the read permission is granted
+•	-w FILE: FILE exists and the write permission is granted
+•	-x FILE: FILE exists and the execute permission is granted
+•	if [ ! -f "${1}" ] || [ ! -r "${1}" ] - File ${1} does not exists or not readable
