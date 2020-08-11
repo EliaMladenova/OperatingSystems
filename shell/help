@@ -1,4 +1,5 @@
 [ $# -eq 3 ] || exit 1 – checks number of arguments and exits if not equal
+2>/dev/null - redirects the errors (stderr) to the black hole (discards the output of the command)
 $# - stores the number of command-line arguments that were passed to the shell program
 egrep - scans a specific file, line to line, and prints the line(s) that contain the search string/regular expression
 $0 - the name of the script itself (script.sh)
@@ -26,3 +27,9 @@ if:
 •	-w FILE: FILE exists and the write permission is granted
 •	-x FILE: FILE exists and the execute permission is granted
 •	if [ ! -f "${1}" ] || [ ! -r "${1}" ] - File ${1} does not exists or not readable
+mktemp - create a temporary file or directory, safely, and print its name. 
+• mktemp [OPTION].. [TEMPLATE]
+• filename=$(mktemp)
+uniq - remove Duplicates from a file using uniq command
+• -c : dispaly duplicate row count
+• -cd : display only duplicate rows
