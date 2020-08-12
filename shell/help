@@ -26,6 +26,7 @@ if:
 •	-r FILE: FILE exists and the read permission is granted
 •	-w FILE: FILE exists and the write permission is granted
 •	-x FILE: FILE exists and the execute permission is granted
+• -z : string is null (has zero length)
 •	if [ ! -f "${1}" ] || [ ! -r "${1}" ] - File ${1} does not exists or not readable
 mktemp - create a temporary file or directory, safely, and print its name. 
 • mktemp [OPTION].. [TEMPLATE]
@@ -33,3 +34,8 @@ mktemp - create a temporary file or directory, safely, and print its name.
 uniq - remove Duplicates from a file using uniq command
 • -c : dispaly duplicate row count
 • -cd : display only duplicate rows
+find
+• newerXY reference: c (the indode status change time of reference); t (reference is interpreted directly as a time)
+• -xtype l : finding symlinks (not broken)
+• -type L : finding symlinks (broken)
+id root = 0
