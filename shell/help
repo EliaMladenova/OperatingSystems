@@ -39,3 +39,4 @@ find
 • -xtype l : finding symlinks (not broken)
 • -type L : finding symlinks (broken)
 id root = 0
+ps - process status
